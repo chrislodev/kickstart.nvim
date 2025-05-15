@@ -1,0 +1,80 @@
+return {
+  -- {
+  --   'mxsdev/nvim-dap-vscode-js',
+  --   dependencies = {
+  --     'mfussenegger/nvim-dap',
+  --     -- You'll also need the vscode-js-debug adapter
+  --     {
+  --       'microsoft/vscode-js-debug',
+  --       version = '1.x',
+  --       build = 'npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out',
+  --     },
+  --   },
+  --   config = function()
+  --     require('dap-vscode-js').setup {
+  --       -- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
+  --       debugger_path = vim.fn.stdpath 'data' .. '/lazy/vscode-js-debug', -- Path to vscode-js-debug installation.
+  --       -- debugger_cmd = { "js-debug-adapter" }, -- Command to use to launch the debug server.
+  --       adapters = { 'pwa-node', 'pwa-chrome', 'pwa-msedge', 'node-terminal', 'pwa-extensionHost', 'node', 'chrome' },
+  --       -- log_file_path = "(stdpath cache)/dap_vscode_js.log" -- Path for file logging
+  --       -- log_file_level = false -- Logging level for output to file. Set to false to disable file logging.
+  --       -- log_console_level = vim.log.levels.ERROR -- Logging level for output to console.
+  --     }
+  --
+  --     for _, language in ipairs { 'typescript', 'javascript' } do
+  --       require('dap').configurations[language] = {
+  --         -- Your configurations here
+  --         {
+  --           type = 'pwa-node',
+  --           request = 'launch',
+  --           name = 'Launch file',
+  --           program = '${file}',
+  --           cwd = '${workspaceFolder}',
+  --         },
+  --         {
+  --           type = 'pwa-node',
+  --           request = 'attach',
+  --           name = 'Attach',
+  --           processId = require('dap.utils').pick_process,
+  --           cwd = '${workspaceFolder}',
+  --         },
+  --         {
+  --           type = 'pwa-chrome',
+  --           request = 'launch',
+  --           name = 'Start Chrome with "localhost"',
+  --           url = 'http://localhost:3000',
+  --           webRoot = '${workspaceFolder}',
+  --           userDataDir = '${workspaceFolder}/.vscode/vscode-chrome-debug-userdatadir',
+  --         },
+  --         -- Add more configurations as needed
+  --         {
+  --           type = 'pwa-chrome',
+  --           request = 'launch',
+  --           name = 'Launch DT',
+  --           url = 'https://discovertasmania.local',
+  --           port = '9229',
+  --           webRoot = '${workspaceFolder}/Source/TourismTasmania.Web/Areas/DiscoverTasmania',
+  --           -- userDataDir = false, -- Use your existing Chrome profile
+  --           -- sourceMapPathOverrides = {
+  --           --   -- Add path mappings if needed
+  --           --   ['webpack:///./*'] = '${webRoot}/*',
+  --           -- },
+  --         },
+  --         {
+  --           type = 'pwa-chrome',
+  --           request = 'launch',
+  --           name = 'Debug in Chrome',
+  --           url = 'https://discovertasmania.local',
+  --           webRoot = '${workspaceFolder}/Source/TourismTasmania.Web/Areas/DiscoverTasmania',
+  --           -- sourceMaps= true,
+  --           -- sourceMapPathOverrides= {
+  --           --   "webpack:///./src/*": "${webRoot}/src/*"
+  --           -- },
+  --           -- userDataDir= false,
+  --           runtimeArgs = { '--remote-debugging-port=9222', '--profile-directory=Profile 3' },
+  --         },
+  --       }
+  --     end
+  --   end,
+  -- },
+}
