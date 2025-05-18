@@ -4,6 +4,7 @@ return {
     picker = {},
     explorer = {},
     lazygit = {},
+    image = {},
   },
   keys = {
     -- Top Pickers & Explorer
