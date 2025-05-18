@@ -77,3 +77,12 @@ vim.o.scrolloff = 10
 vim.o.confirm = true
 
 vim.opt.shiftwidth = 2
+
+vim.opt.swapfile = false
+-- vim.g.lazyvim_picker = "snacks"
+vim.g.augment_workspace_folders = {
+  '~/Repos/Orchard/TourismTasmania/worktrees/develop',
+  '~/Repos/Orchard/TourismTasmania/worktrees/hotfix/TTASCIP-775-singapore-detection-for-cookies',
+  '~/Repos/Orchard/ToursimTasmania/tourism-tasmania-multisite-main.git.worktrees/feature/TTASCIP-326-support-deep-linking',
+  '~/Repos/Orchard/PlaywrightTests',
+}
