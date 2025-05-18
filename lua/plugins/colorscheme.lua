@@ -39,7 +39,7 @@
 --     -- }, opts))
 --     -- vim.cmd.colorscheme("night-owl")
 --     -- Change the background colour of the currently selected line
---     vim.cmd [[highlight CursorLine guibg=#dddddd]]
+--     -- vim.cmd [[highlight CursorLine guibg=#dddddd]] -- NOT WORKING
 --     vim.cmd.colorscheme 'night-owl'
 --   end,
 -- }
