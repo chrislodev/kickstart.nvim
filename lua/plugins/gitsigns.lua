@@ -50,7 +50,7 @@ return {
       local gs = require 'gitsigns'
 
       -- Map hover preview to show changes when cursor is on a line
-      vim.keymap.set('n', '<leader>hp', function()
+      vim.keymap.set('n', '<leader>hP', function()
         -- Safely call preview_hunk
         pcall(function()
           gs.preview_hunk()
@@ -89,6 +89,24 @@ return {
         end)
       end, { buffer = bufnr, desc = 'Toggle git blame line' })
 
+      vim.keymap.set('n', '<leader>hB', function()
+        pcall(function()
+          gs.blame()
+        end)
+      end, { buffer = bufnr, desc = 'Toggle git blame' })
+
+      vim.keymap.set('n', '<leader>hn', function()
+        pcall(function()
+          gs.nav_hunk 'next'
+        end)
+      end, { buffer = bufnr, desc = 'Next hunk' })
+
+      vim.keymap.set('n', '<leader>hp', function()
+        pcall(function()
+          gs.nav_hunk 'prev'
+        end)
+      end, { buffer = bufnr, desc = 'Prev hunk' })
+
       -- Toggle deleted line display
       vim.keymap.set('n', '<leader>hd', function()
         pcall(function()
@@ -104,4 +122,18 @@ return {
       end, { buffer = bufnr, desc = 'Git diff against index' })
     end,
   },
+  -- keys = {
+  --   {
+  --     ']h',
+  --     mode = { 'n', 'v' },
+  --     '<cmd>Gitsigns nav_hunk next<cr>',
+  --     desc = 'Next hunk',
+  --   },
+  --   {
+  --     '[h',
+  --     mode = { 'n', 'v' },
+  --     '<cmd>Gitsigns nav_hunk prev<cr>',
+  --     desc = 'Prev hunk',
+  --   },
+  -- },
 }
