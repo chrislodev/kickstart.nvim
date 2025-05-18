@@ -7,6 +7,10 @@ return {
     explorer = {},
     lazygit = {},
     image = {},
+    notifier = {},
+    notify = {},
+    scroll = {},
+    statuscolumn = {},
     ---@class snacks.dashboard.Config
     dashboard =
       ---@field enabled? boolean
