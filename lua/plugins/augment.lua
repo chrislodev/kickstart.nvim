@@ -23,13 +23,33 @@ return {
       '<leader>ac',
       '<cmd>Augment chat<cr>',
       desc = 'Chat',
-      mode = { 'n', 'i' },
+      mode = { 'n', 'i', 'v' },
     },
     {
       '<leader>an',
       '<cmd>Augment chat-new<cr>',
       desc = 'New chat',
-      mode = { 'n', 'i' },
+      mode = { 'n', 'i', 'v' },
     },
   },
+  enabled = function()
+    -- If no augmentignore file, disable augment
+    local cwd = vim.uv.cwd()
+    print('cwd is: ' .. cwd)
+    local file = cwd .. '/.augmentignore'
+    local enabled = false
+    if vim.loop.fs_stat(file) then
+      print('.augmentignore file found at: ' .. file)
+      enabled = true
+    else
+      print 'No .augmentignore file found'
+    end
+    print('augment enabled: ' .. tostring(enabled))
+    return enabled
+  end,
+  config = function()
+    -- Set workspace folders to current working directory
+    local cwd = vim.uv.cwd()
+    vim.g.augment_workspace_folders = { cwd }
+  end,
 }
