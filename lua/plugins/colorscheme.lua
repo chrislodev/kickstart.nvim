@@ -19,39 +19,39 @@
 --   end,
 -- }
 
--- return {
---   'oxfist/night-owl.nvim',
---   lazy = false, -- set to false to make sure we load this during startup if it is your main colorscheme
---   priority = 1000, -- make sure to load this before all the other start plugins
---   config = function(_, opts)
---     local night_owl = require 'night-owl'
---     night_owl.setup {
---       bold = true,
---       italics = true,
---       underline = true,
---       undercurl = true,
---       transparent_background = true,
---     }
---     -- TODO:Setting the background colour of the notify popup no longer works since Lazyvim changed
---     -- to use `Snacks` instead of `notify`. I have to figure out how to change the background.
---     -- require("notify").setup(vim.tbl_extend("keep", {
---     --   background_colour = "#f4c284",
---     -- }, opts))
---     -- vim.cmd.colorscheme("night-owl")
---     -- Change the background colour of the currently selected line
---     -- vim.cmd [[highlight CursorLine guibg=#dddddd]] -- NOT WORKING
---     vim.cmd.colorscheme 'night-owl'
---   end,
--- }
-
 return {
-  'catppuccin/nvim',
-  name = 'catppuccin',
-  priority = 1000,
-  config = function()
-    require('catppuccin').setup {
-      flavour = 'mocha',
+  'oxfist/night-owl.nvim',
+  lazy = false, -- set to false to make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other start plugins
+  config = function(_, opts)
+    local night_owl = require 'night-owl'
+    night_owl.setup {
+      bold = true,
+      italics = true,
+      underline = true,
+      undercurl = true,
+      transparent_background = true,
     }
-    vim.cmd.colorscheme 'catppuccin'
+    -- TODO:Setting the background colour of the notify popup no longer works since Lazyvim changed
+    -- to use `Snacks` instead of `notify`. I have to figure out how to change the background.
+    -- require("notify").setup(vim.tbl_extend("keep", {
+    --   background_colour = "#f4c284",
+    -- }, opts))
+    -- vim.cmd.colorscheme("night-owl")
+    -- Change the background colour of the currently selected line
+    -- vim.cmd [[highlight CursorLine guibg=#dddddd]] -- NOT WORKING
+    vim.cmd.colorscheme 'night-owl'
   end,
 }
+
+-- return {
+--   'catppuccin/nvim',
+--   name = 'catppuccin',
+--   priority = 1000,
+--   config = function()
+--     require('catppuccin').setup {
+--       flavour = 'mocha',
+--     }
+--     vim.cmd.colorscheme 'catppuccin'
+--   end,
+-- }
