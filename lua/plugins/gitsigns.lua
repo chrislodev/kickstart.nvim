@@ -50,7 +50,7 @@ return {
       local gs = require 'gitsigns'
 
       -- Map hover preview to show changes when cursor is on a line
-      vim.keymap.set('n', '<leader>hP', function()
+      vim.keymap.set('n', '<leader>ghP', function()
         -- Safely call preview_hunk
         pcall(function()
           gs.preview_hunk()
@@ -58,64 +58,64 @@ return {
       end, { buffer = bufnr, desc = 'Preview git hunk' })
 
       -- Auto-preview on cursor hold is disabled
-      -- You can still manually preview changes with <leader>hp
+      -- You can still manually preview changes with <leader>ghp
 
       -- Add VSCode/JetBrains-like keybindings for common git operations
       -- Using function wrappers with pcall for safety
 
       -- Stage/unstage the current hunk
-      vim.keymap.set('n', '<leader>hs', function()
+      vim.keymap.set('n', '<leader>ghs', function()
         pcall(function()
           gs.stage_hunk()
         end)
       end, { buffer = bufnr, desc = 'Stage git hunk' })
 
-      vim.keymap.set('n', '<leader>hu', function()
+      vim.keymap.set('n', '<leader>ghu', function()
         pcall(function()
           gs.undo_stage_hunk()
         end)
       end, { buffer = bufnr, desc = 'Undo stage git hunk' })
 
-      vim.keymap.set('n', '<leader>hr', function()
+      vim.keymap.set('n', '<leader>ghr', function()
         pcall(function()
           gs.reset_hunk()
         end)
       end, { buffer = bufnr, desc = 'Reset git hunk' })
 
       -- Toggle current line blame (like JetBrains/VSCode git blame)
-      vim.keymap.set('n', '<leader>hb', function()
+      vim.keymap.set('n', '<leader>ghb', function()
         pcall(function()
           gs.blame_line()
         end)
       end, { buffer = bufnr, desc = 'Toggle git blame line' })
 
-      vim.keymap.set('n', '<leader>hB', function()
+      vim.keymap.set('n', '<leader>ghB', function()
         pcall(function()
           gs.blame()
         end)
       end, { buffer = bufnr, desc = 'Toggle git blame' })
 
-      vim.keymap.set('n', '<leader>hn', function()
+      vim.keymap.set('n', '<leader>ghn', function()
         pcall(function()
           gs.nav_hunk 'next'
         end)
       end, { buffer = bufnr, desc = 'Next hunk' })
 
-      vim.keymap.set('n', '<leader>hp', function()
+      vim.keymap.set('n', '<leader>ghp', function()
         pcall(function()
           gs.nav_hunk 'prev'
         end)
       end, { buffer = bufnr, desc = 'Prev hunk' })
 
       -- Toggle deleted line display
-      vim.keymap.set('n', '<leader>hd', function()
+      vim.keymap.set('n', '<leader>ghd', function()
         pcall(function()
           gs.preview_hunk_inline()
         end)
       end, { buffer = bufnr, desc = 'Toggle git show deleted' })
 
       -- Diff view (like JetBrains/VSCode diff view)
-      vim.keymap.set('n', '<leader>hD', function()
+      vim.keymap.set('n', '<leader>ghD', function()
         pcall(function()
           gs.diffthis()
         end)

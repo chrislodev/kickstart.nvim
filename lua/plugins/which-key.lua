@@ -57,9 +57,12 @@ return { -- Useful plugin to show you pending keybinds.
 
     -- Document existing key chains
     spec = {
+      { '<leader>d', group = '[D]ebugging' },
+      { '<leader>g', group = '[G]it' },
+      { '<leader>gh', group = 'Git [H]unks' }, -- Note nested keymaps
       { '<leader>s', group = '[S]earch' },
       { '<leader>t', group = '[T]oggle' },
-      { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      -- { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
     },
   },
 }
