@@ -207,6 +207,7 @@ return {
       -- ts_ls = {},
       --prettierd = {},
       vtsls = {},
+      somesass_ls = {}, -- CL enables `grd` to go to scss definitions, better hover documentation etc.
 
       lua_ls = {
         -- cmd = { ... },
