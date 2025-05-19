@@ -3,7 +3,29 @@ return {
   lazy = false,
   priority = 1000,
   opts = {
-    picker = {},
+    picker = {
+      source = {
+        ---@class snacks.picker.files.Config: snacks.picker.proc.Config
+        ---@field cmd? "fd"| "rg"| "find" command to use. Leave empty to auto-detect
+        ---@field hidden? boolean show hidden files
+        ---@field ignored? boolean show ignored files
+        ---@field dirs? string[] directories to search
+        ---@field follow? boolean follow symlinks
+        ---@field exclude? string[] exclude patterns
+        ---@field args? string[] additional arguments
+        ---@field ft? string|string[] file extension(s)
+        ---@field rtp? boolean search in runtimepath
+        finder = 'files',
+        format = 'file',
+        show_empty = true,
+        ignored = true,
+        follow = false,
+        supports_live = true,
+        files = {
+          hidden = true,
+        },
+      },
+    },
     explorer = {},
     lazygit = {},
     image = {},
