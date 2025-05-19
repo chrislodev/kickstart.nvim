@@ -104,6 +104,9 @@ return {
         },
       },
   },
+  -- config = function()
+  --   local Snacks = require 'snacks'
+  -- end,
   keys = {
     -- Top Pickers & Explorer
     {
@@ -476,6 +479,13 @@ return {
         Snacks.lazygit()
       end,
       desc = 'Lazygit',
+    },
+    {
+      '<leader>bd',
+      function()
+        Snacks.bufdelete()
+      end,
+      desc = 'Delete or close buffer',
     },
   },
 }

@@ -58,6 +58,7 @@ return { -- Useful plugin to show you pending keybinds.
     -- Document existing key chains
     spec = {
       { '<leader>a', group = '[A]I' },
+      { '<leader>b', group = '[B]uffers' },
       { '<leader>c', group = '[C]ode' },
       { '<leader>d', group = '[D]ebugging' },
       { '<leader>g', group = '[G]it' },
