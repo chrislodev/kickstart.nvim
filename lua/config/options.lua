@@ -10,8 +10,6 @@ vim.g.have_nerd_font = false
 
 -- Make line numbers default
 vim.o.number = true
--- You can also add relative line numbers, to help with jumping.
---  Experiment for yourself to see if you like it!
 vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
@@ -79,7 +77,7 @@ vim.o.confirm = true
 vim.opt.shiftwidth = 2
 
 vim.opt.swapfile = false
--- vim.g.lazyvim_picker = "snacks"
+
 vim.g.augment_workspace_folders = {
   '~/Repos/Orchard/TourismTasmania/worktrees/develop',
   '~/Repos/Orchard/TourismTasmania/worktrees/hotfix/TTASCIP-775-singapore-detection-for-cookies',
