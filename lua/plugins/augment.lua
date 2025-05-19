@@ -43,6 +43,13 @@ return {
       enabled = true
     else
       print 'No .augmentignore file found'
+      local choice = vim.fn.confirm('Enable Augment anyway?', '&Yes\n&No', 2)
+      if choice == 1 then
+        enabled = true
+        print 'User chose to enable Augment anyway'
+      else
+        print 'Augment is disabled!'
+      end
     end
     print('augment enabled: ' .. tostring(enabled))
     return enabled

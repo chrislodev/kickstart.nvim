@@ -1,6 +1,0 @@
-appsettings*
-bitbucket-pipelines.yml
-.env*
-
-<!-- We want to include node modules so Augment has context for packages we use -->
-!node_modules
