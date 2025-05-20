@@ -30,7 +30,7 @@ return {
       italics = true,
       underline = true,
       undercurl = true,
-      transparent_background = false,
+      transparent_background = true,
     }
     -- TODO:Setting the background colour of the notify popup no longer works since Lazyvim changed
     -- to use `Snacks` instead of `notify`. I have to figure out how to change the background.
