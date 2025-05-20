@@ -205,9 +205,10 @@ return {
     {
       '<leader>gl',
       function()
-        Snacks.picker.git_log()
+        -- Snacks.picker.git_log()
+        Snacks.lazygit.log()
       end,
-      desc = 'Git Log',
+      desc = 'Lazygit Logs',
     },
     {
       '<leader>gL',
@@ -240,9 +241,10 @@ return {
     {
       '<leader>gf',
       function()
-        Snacks.picker.git_log_file()
+        -- Snacks.picker.git_log_file()
+        Snacks.lazygit.log_file()
       end,
-      desc = 'Git Log File',
+      desc = 'Lazygit Log File',
     },
     -- Grep
     {
