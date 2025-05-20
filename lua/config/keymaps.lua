@@ -47,8 +47,11 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Moves lines down in visual selection' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Moves lines up in visual selection' })
 
+-- Buffers
 vim.keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Move down in buffer with cursor centered' })
 vim.keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Move up in buffer with cursor centered' })
+vim.keymap.set('n', '<leader>b|', ':vsplit<CR>', { desc = 'Split vertical' })
+vim.keymap.set('n', '<leader>b"', ':split<CR>', { desc = 'Split horizontal' })
 
 -- Keeps cursor centered when searching
 vim.keymap.set('n', 'n', 'nzzzv')

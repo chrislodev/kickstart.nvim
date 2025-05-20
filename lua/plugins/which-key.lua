@@ -64,7 +64,9 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>g', group = '[G]it' },
       { '<leader>gh', group = 'Git [H]unks' }, -- Note nested keymaps
       { '<leader>s', group = '[S]earch' },
-      { '<leader>t', group = '[T]oggle' },
+      { '<leader>t', group = '[T]ests' },
+      { '<leader>u', group = '[U]ser Interface' },
+      { '<leader>x', group = 'Diagnostics' },
       -- { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
     },
   },
