@@ -20,4 +20,26 @@ return {
       },
     }
   end,
+  keys = {
+    {
+      '<leader>tr',
+      '<cmd>Neotest run<cr>',
+      desc = 'Neotest run',
+    },
+    {
+      '<leader>to',
+      '<cmd>Neotest output<cr>',
+      desc = 'Neotest output',
+    },
+    {
+      '<leader>ts',
+      '<cmd>Neotest summary<cr>',
+      desc = 'Neotest summary',
+    },
+    {
+      '<leader>ta',
+      '<cmd>lua require("neotest").run.run({ suite = true })<cr>',
+      desc = 'Neotest run all tests',
+    },
+  },
 }
