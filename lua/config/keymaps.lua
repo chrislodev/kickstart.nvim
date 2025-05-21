@@ -56,3 +56,7 @@ vim.keymap.set('n', '<leader>b"', ':split<CR>', { desc = 'Split horizontal' })
 -- Keeps cursor centered when searching
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
+
+-- Navigate between tabs with `shift-h` and `shift-l`.
+vim.keymap.set('n', '<S-h>', '<cmd>tabprevious<cr>', { desc = 'Previous tab' })
+vim.keymap.set('n', '<S-l>', '<cmd>tabnext<cr>', { desc = 'Next tab' })
