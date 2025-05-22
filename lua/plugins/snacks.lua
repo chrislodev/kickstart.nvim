@@ -28,17 +28,23 @@ return {
       },
     },
     picker = {
-      source = {
-        finder = 'files',
-        format = 'file',
-        show_empty = true,
-        ignored = true,
-        follow = false,
-        supports_live = true,
-        files = {
-          hidden = true,
-        },
+      enabled = true,
+      matchers = {
+        frecency = true,
+        cwd_bonus = true,
       },
+      -- Adding `source` table breaks kulala `select environment` in picker
+      -- source = {
+      --   finder = 'files',
+      --   format = 'file',
+      --   show_empty = true,
+      --   ignored = true,
+      --   follow = false,
+      --   supports_live = true,
+      --   files = {
+      --     hidden = true,
+      --   },
+      -- },
     },
     explorer = {},
     lazygit = {},
