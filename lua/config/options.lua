@@ -84,3 +84,5 @@ vim.g.augment_workspace_folders = {
   '~/Repos/Orchard/ToursimTasmania/tourism-tasmania-multisite-main.git.worktrees/feature/TTASCIP-326-support-deep-linking',
   '~/Repos/Orchard/PlaywrightTests',
 }
+
+vim.opt.conceallevel = 1
