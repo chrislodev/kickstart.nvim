@@ -4,12 +4,6 @@ return {
   priority = 1000,
   opts = {
     zen = {
-      -- your zen configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-      -- You can add any `Snacks.toggle` id here.
-      -- Toggle state is restored when the window is closed.
-      -- Toggle config options are NOT merged.
       toggles = {
         dim = false,
         git_signs = false,
