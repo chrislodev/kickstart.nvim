@@ -58,5 +58,8 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Navigate between tabs with `shift-h` and `shift-l`.
-vim.keymap.set('n', '<S-h>', '<cmd>tabprevious<cr>', { desc = 'Previous tab' })
-vim.keymap.set('n', '<S-l>', '<cmd>tabnext<cr>', { desc = 'Next tab' })
+-- NOTE you can navigate between tabs with `gt`, `gT`and `2gt` etc
+-- vim.keymap.set('n', '<S-h>', '<cmd>tabprevious<cr>', { desc = 'Previous tab' })
+-- vim.keymap.set('n', '<S-l>', '<cmd>tabnext<cr>', { desc = 'Next tab' })
+vim.keymap.set('n', '<S-h>', '<cmd>BufferLineCyclePrev<cr>', { desc = 'Previous tab' })
+vim.keymap.set('n', '<S-l>', '<cmd>BufferLineCycleNext<cr>', { desc = 'Next tab' })
