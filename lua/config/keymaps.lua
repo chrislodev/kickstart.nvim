@@ -57,7 +57,8 @@ vim.keymap.set('n', '<leader>b"', ':split<CR>', { desc = 'Split horizontal' })
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
--- Navigate between tabs with `shift-h` and `shift-l`.
+-- BufferLine
+-- Navigate between tabs with `shift-h` and `shift-l` and other bits.
 -- NOTE you can navigate between tabs with `gt`, `gT`and `2gt` etc
 -- vim.keymap.set('n', '<S-h>', '<cmd>tabprevious<cr>', { desc = 'Previous tab' })
 -- vim.keymap.set('n', '<S-l>', '<cmd>tabnext<cr>', { desc = 'Next tab' })
