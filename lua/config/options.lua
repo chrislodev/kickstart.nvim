@@ -3,7 +3,7 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
-vim.opt.switchbuf = 'useopen,usetab,newtab'
+vim.opt.switchbuf = 'useopen,usetab,vsplit'
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = false
