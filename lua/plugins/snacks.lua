@@ -245,13 +245,14 @@ return {
       end,
       desc = 'Git Stash',
     },
-    {
-      '<leader>gd',
-      function()
-        Snacks.picker.git_diff()
-      end,
-      desc = 'Git Diff (Hunks)',
-    },
+    -- This always gives an error
+    -- {
+    --   '<leader>gd',
+    --   function()
+    --     Snacks.picker.git_diff()
+    --   end,
+    --   desc = 'Git Diff (Hunks)',
+    -- },
     {
       '<leader>gf',
       function()
