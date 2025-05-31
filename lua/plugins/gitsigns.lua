@@ -108,14 +108,14 @@ return {
       end, { buffer = bufnr, desc = 'Prev hunk' })
 
       -- Toggle deleted line display
-      vim.keymap.set('n', '<leader>ghd', function()
+      vim.keymap.set('n', '<leader>ghD', function()
         pcall(function()
           gs.preview_hunk_inline()
         end)
       end, { buffer = bufnr, desc = 'Toggle git show deleted' })
 
       -- Diff view (like JetBrains/VSCode diff view)
-      vim.keymap.set('n', '<leader>ghD', function()
+      vim.keymap.set('n', '<leader>ghd', function()
         pcall(function()
           gs.diffthis()
         end)
