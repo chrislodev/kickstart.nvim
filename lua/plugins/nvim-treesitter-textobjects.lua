@@ -83,10 +83,10 @@ return {
               query = '@call.outer',
               desc = 'Next function call start',
             },
-            [']c'] = {
-              query = '@class.outer',
-              desc = 'Next class start',
-            },
+            -- [']c'] = {
+            --   query = '@class.outer',
+            --   desc = 'Next class start',
+            -- },
             [']i'] = {
               query = '@conditional.outer',
               desc = 'Next conditional start',
@@ -150,7 +150,7 @@ return {
               desc = 'Previous loop end',
             },
           },
-        },  
+        },
       },
     }
   end,
