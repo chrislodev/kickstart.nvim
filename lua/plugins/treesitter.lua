@@ -8,6 +8,7 @@ return {
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
   opts = {
     ensure_installed = {
+      'bash',
       'css',
       'typescript',
       'javascript',
@@ -20,6 +21,7 @@ return {
       'markdown',
       'markdown_inline',
       'query',
+      'regex',
       'scss',
       'vim',
       'vimdoc',
