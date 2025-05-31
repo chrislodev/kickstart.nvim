@@ -33,7 +33,7 @@ return {
     },
   },
   enabled = function()
-    -- If no augmentignore file, disable augment
+    -- If no augmentignore file, disable augment unless user confirms
     local cwd = vim.uv.cwd()
     print('cwd is: ' .. cwd)
     local file = cwd .. '/.augmentignore'
@@ -58,5 +58,6 @@ return {
     -- Set workspace folders to current working directory
     local cwd = vim.uv.cwd()
     vim.g.augment_workspace_folders = { cwd }
+    vim.keymap.set('i', '<cr>', "<cmd>call augment#Accept('\n')<cr>", { noremap = true })
   end,
 }
