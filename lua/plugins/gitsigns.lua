@@ -58,7 +58,7 @@ return {
       end, { buffer = bufnr, desc = 'Preview git hunk' })
 
       -- Auto-preview on cursor hold is disabled
-      -- You can still manually preview changes with <leader>ghp
+      -- You can still manually preview changes with <leader>ghP
 
       -- Add VSCode/JetBrains-like keybindings for common git operations
       -- Using function wrappers with pcall for safety
