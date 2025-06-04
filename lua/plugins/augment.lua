@@ -58,6 +58,6 @@ return {
     -- Set workspace folders to current working directory
     local cwd = vim.uv.cwd()
     vim.g.augment_workspace_folders = { cwd }
-    vim.keymap.set('i', '<cr>', "<cmd>call augment#Accept('\n')<cr>", { noremap = true })
+    vim.keymap.set('i', '<cr>', '<cmd>call augment#Accept()<cr>', { noremap = true })
   end,
 }
