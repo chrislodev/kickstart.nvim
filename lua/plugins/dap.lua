@@ -50,6 +50,31 @@ return {
           -- Debug web applications (client side)
           {
             type = 'chrome',
+            request = 'attach',
+            name = 'Attach to Chrome',
+            -- program = '${file}',
+            cwd = vim.fn.getcwd(),
+            sourceMaps = true,
+            protocol = 'inspector',
+            port = 9222,
+            webRoot = function()
+              local co = coroutine.running()
+              return coroutine.create(function()
+                vim.ui.input({
+                  prompt = 'Enter webRoot: ',
+                  default = '${workspaceFolder}/Source/TourismTasmania.Web/Areas/DiscoverTasmania',
+                }, function(input)
+                  if input == nil or input == '' then
+                    return
+                  else
+                    coroutine.resume(co, input)
+                  end
+                end)
+              end)
+            end,
+          },
+          {
+            type = 'chrome',
             request = 'launch',
             name = 'Debug in Chrome',
             url = function()
