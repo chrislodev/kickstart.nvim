@@ -52,7 +52,6 @@ return {
             type = 'chrome',
             request = 'launch',
             name = 'Debug in Chrome',
-            -- url = 'https://discovertasmania.local',
             url = function()
               local co = coroutine.running()
               return coroutine.create(function()
@@ -69,7 +68,21 @@ return {
               end)
             end,
             port = 9222,
-            webRoot = '${workspaceFolder}/Source/TourismTasmania.Web/Areas/DiscoverTasmania',
+            webRoot = function()
+              local co = coroutine.running()
+              return coroutine.create(function()
+                vim.ui.input({
+                  prompt = 'Enter webRoot: ',
+                  default = '${workspaceFolder}/Source/TourismTasmania.Web/Areas/DiscoverTasmania',
+                }, function(input)
+                  if input == nil or input == '' then
+                    return
+                  else
+                    coroutine.resume(co, input)
+                  end
+                end)
+              end)
+            end,
           },
           -- {
           --   type = 'pwa-chrome',

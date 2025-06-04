@@ -13,8 +13,12 @@ return {
       adapters = {
         require('neotest-playwright').adapter {
           options = {
-            persist_project_selection = true,
             enable_dynamic_test_discovery = true,
+            get_playwright_config = function()
+              return vim.loop.cwd() .. '/playwright.config.ts'
+            end,
+            persist_project_selection = true,
+            preset = 'none',
           },
         },
       },
@@ -30,6 +34,21 @@ return {
       '<leader>to',
       '<cmd>Neotest output<cr>',
       desc = 'Neotest output',
+    },
+    {
+      '<leader>tp',
+      '<cmd>NeotestPlaywrightPreset<cr>',
+      desc = 'Select preset',
+    },
+    {
+      '<leader>tP',
+      '<cmd>NeotestPlaywrightProject<cr>',
+      desc = 'Select project(s)',
+    },
+    {
+      '<leader>tR',
+      '<cmd>NeotestPlaywrightRefresh<cr>',
+      desc = 'Refresh Playwright',
     },
     {
       '<leader>ts',
