@@ -95,13 +95,13 @@ return {
         end)
       end, { buffer = bufnr, desc = 'Toggle git blame' })
 
-      vim.keymap.set('n', '<leader>ghn', function()
+      vim.keymap.set('n', ']h', function()
         pcall(function()
           gs.nav_hunk 'next'
         end)
       end, { buffer = bufnr, desc = 'Next hunk' })
 
-      vim.keymap.set('n', '<leader>ghp', function()
+      vim.keymap.set('n', '[h', function()
         pcall(function()
           gs.nav_hunk 'prev'
         end)
