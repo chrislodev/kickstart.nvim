@@ -65,6 +65,7 @@ return { -- Useful plugin to show you pending keybinds.
       { '<leader>f', group = '[F]ind' },
       { '<leader>g', group = '[G]it' },
       { '<leader>gd', group = 'Git [d]iffview' },
+      { '<leader>gdf', group = 'Git [d]iffview files' },
       { '<leader>gh', group = 'Git [H]unks' }, -- Note nested keymaps
       { '<leader>R', group = '[R]est client' },
       { '<leader>s', group = '[S]earch' },
