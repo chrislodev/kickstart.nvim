@@ -216,14 +216,14 @@ return {
       end,
       desc = 'Git Branches',
     },
-    {
-      '<leader>gl',
-      function()
-        -- Snacks.picker.git_log()
-        Snacks.lazygit.log()
-      end,
-      desc = 'Lazygit Logs',
-    },
+    -- {
+    --   '<leader>gl',
+    --   function()
+    --     -- Snacks.picker.git_log()
+    --     Snacks.lazygit.log()
+    --   end,
+    --   desc = 'Lazygit Logs',
+    -- },
     {
       '<leader>gL',
       function()
@@ -231,13 +231,13 @@ return {
       end,
       desc = 'Git Log Line',
     },
-    {
-      '<leader>gs',
-      function()
-        Snacks.picker.git_status()
-      end,
-      desc = 'Git Status',
-    },
+    -- {
+    --   '<leader>gs',
+    --   function()
+    --     Snacks.picker.git_status()
+    --   end,
+    --   desc = 'Git Status',
+    -- },
     {
       '<leader>gS',
       function()
@@ -253,14 +253,14 @@ return {
     --   end,
     --   desc = 'Git Diff (Hunks)',
     -- },
-    {
-      '<leader>gf',
-      function()
-        -- Snacks.picker.git_log_file()
-        Snacks.lazygit.log_file()
-      end,
-      desc = 'Lazygit Log File',
-    },
+    -- {
+    --   '<leader>gf',
+    --   function()
+    --     -- Snacks.picker.git_log_file()
+    --     Snacks.lazygit.log_file()
+    --   end,
+    --   desc = 'Lazygit Log File',
+    -- },
     -- Grep
     {
       '<leader>sb',
