@@ -69,3 +69,7 @@ vim.keymap.set('n', '<leader>bp', '<cmd>BufferLinePick<cr>', { desc = 'Pick buff
 vim.keymap.set('n', '<leader>bsd', '<cmd>BufferLineSortByDirectory<cr>', { desc = 'Sort by directory' })
 vim.keymap.set('n', '<leader>bse', '<cmd>BufferLineSortByExtension<cr>', { desc = 'Sort by extension' })
 vim.keymap.set('n', '<leader>bst', '<cmd>BufferLineSortByTabs<cr>', { desc = 'Sort by tabs' })
+
+-- CL Disable 's' keymap which usually deletes character and goes into insert mode - this was
+-- interfering with `mini-surround`
+vim.keymap.set({ 'n', 'x' }, 's', '<Nop>')
