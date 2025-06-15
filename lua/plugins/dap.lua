@@ -10,8 +10,20 @@ return {
   { 'nvim-neotest/nvim-nio' },
   {
     'mfussenegger/nvim-dap',
+    dependencies = {
+      {
+        'rcarriga/nvim-dap-ui',
+      },
+      {
+        'Joakker/lua-json5',
+        build = './install.sh',
+      },
+      { 'theHamsta/nvim-dap-virtual-text' },
+    },
     config = function()
       local dap = require 'dap'
+
+      require('nvim-dap-virtual-text').setup()
 
       dap.adapters.chrome = {
         type = 'executable',
@@ -268,15 +280,6 @@ return {
           require('dap').continue()
         end,
         desc = 'Run with Args',
-      },
-    },
-    dependencies = {
-      {
-        'rcarriga/nvim-dap-ui',
-      },
-      {
-        'Joakker/lua-json5',
-        build = './install.sh',
       },
     },
   },
