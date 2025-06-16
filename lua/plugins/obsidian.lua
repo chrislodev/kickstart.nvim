@@ -17,6 +17,9 @@ return {
     -- see below for full list of optional dependencies 👇
   },
   opts = {
+    ui = {
+      enable = false, -- This is to avoid conflicting with `render-markdown`
+    },
     workspaces = {
       {
         name = 'chris',
