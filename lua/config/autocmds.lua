@@ -10,11 +10,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- Example of how to add an `autocmd` when the Neovim terminal is opened
-vim.api.nvim_create_autocmd('TermOpen', {
-  group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
-  callback = function()
-    -- print 'Welcome to the terminal, Chris. How may I help you?'
-    vim.notify 'Welcome to the terminal.'
-  end,
-})
+-- -- Example of how to add an `autocmd` when the Neovim terminal is opened
+-- vim.api.nvim_create_autocmd('TermOpen', {
+--   group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
+--   callback = function()
+--     -- print 'Welcome to the terminal, Chris. How may I help you?'
+--     vim.notify 'Welcome to the terminal.'
+--   end,
+-- })
