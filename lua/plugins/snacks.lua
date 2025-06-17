@@ -29,6 +29,9 @@ return {
     },
     picker = {
       enabled = true,
+      filter = {
+        cwd = true,
+      },
       matchers = {
         frecency = true,
         cwd_bonus = true,
@@ -393,7 +396,7 @@ return {
     {
       '<leader>sm',
       function()
-        Snacks.picker.marks()
+        Snacks.picker.marks { global = true }
       end,
       desc = 'Marks',
     },
