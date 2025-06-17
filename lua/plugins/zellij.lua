@@ -14,10 +14,10 @@ return {
     --   require('zellij-nav').setup()
     -- end,
   },
-  {
-    'hiasr/vim-zellij-navigator.nvim',
-    config = function()
-      require('vim-zellij-navigator').setup()
-    end,
-  },
+  -- {
+  --   'hiasr/vim-zellij-navigator.nvim',
+  --   config = function()
+  --     require('vim-zellij-navigator').setup()
+  --   end,
+  -- },
 }
